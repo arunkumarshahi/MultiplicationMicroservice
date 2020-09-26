@@ -21,9 +21,10 @@ class EventHandler {
     }
 
     @RabbitListener(queues = "${multiplication.queue}")
-    void handleMultiplicationSolved(final MultiplicationSolvedEvent event) {
-        log.info("Multiplication Solved Event received: {}", event.getMultiplicationResultAttemptId());
+    void handleMultiplicationSolved(final MultiplicationSolvedEvent event1) {
+        log.info("Multiplication Solved Event received: {}", event1);
         try {
+        	MultiplicationSolvedEvent event= (MultiplicationSolvedEvent)event1;
             gameService.newAttemptForUser(event.getUserId(),
                     event.getMultiplicationResultAttemptId(),
                     event.isCorrect());

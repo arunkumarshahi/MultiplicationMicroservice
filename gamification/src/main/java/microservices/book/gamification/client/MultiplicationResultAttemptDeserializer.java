@@ -6,6 +6,8 @@ import com.fasterxml.jackson.core.ObjectCodec;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonDeserializer;
 import com.fasterxml.jackson.databind.JsonNode;
+
+import lombok.extern.slf4j.Slf4j;
 import microservices.book.gamification.client.dto.MultiplicationResultAttempt;
 
 import java.io.IOException;
@@ -14,6 +16,7 @@ import java.io.IOException;
  * Deserializes an attempt coming from the Multiplication microservice into the
  * Gamification's representation of an attempt.
  */
+@Slf4j
 public class MultiplicationResultAttemptDeserializer extends JsonDeserializer<MultiplicationResultAttempt> {
 
 	@Override
