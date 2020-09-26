@@ -40,7 +40,7 @@ class MultiplicationServiceImpl implements MultiplicationService {
 		return new Multiplications(factorA, factorB);
 	}
 
-	@Transactional
+	//@Transactional
 	@Override
 	public boolean checkAttempt(final MultiplicationResultAttempt attempt) {
 		// Check if the user already exists for that alias

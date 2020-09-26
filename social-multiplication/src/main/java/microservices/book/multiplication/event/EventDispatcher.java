@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import lombok.extern.slf4j.Slf4j;
+
 @Slf4j
 @Component
 public class EventDispatcher {
@@ -26,5 +27,6 @@ public class EventDispatcher {
 	public void send(final MultiplicationSolvedEvent multiplicationSolvedEvent) {
 		rabbitTemplate.convertAndSend(multiplicationExchange, multiplicationSolvedRoutingKey,
 				multiplicationSolvedEvent);
+		log.info("send messages {}", multiplicationSolvedEvent);
 	}
 }
