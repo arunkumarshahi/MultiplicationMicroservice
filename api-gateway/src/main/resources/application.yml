@@ -7,7 +7,7 @@ zuul:
   routes:
     multiplications:
       path: /multiplications/**
-      serviceId: multiplication
+      serviceId: MULTIPLICATION
       strip-prefix: false
     results:
       path: /results/**
@@ -21,7 +21,7 @@ zuul:
       path: /stats/**
       serviceId: gamification
       strip-prefix: false
-
+#
 endpoints:
   routes:
     sensitive: false
