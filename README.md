@@ -17,3 +17,8 @@ start jetty :: java -jar /opt/jetty9/start.jar
 
 http://localhost:8000/api/multiplications/1
 http://localhost:8761/
+
+
+http://localhost:8000/api/leaders
+
+http://localhost:8000/api/multiplications/random
