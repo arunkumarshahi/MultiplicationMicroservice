@@ -21,4 +21,9 @@ public class MultiplicationController {
 	Multiplications getRandomMultiplication() {
 		return multiplicationService.createRandomMultiplication();
 	}
+	
+	@GetMapping
+	String getTestRandomMultiplication() {
+		return "Hello Arun";
+	}
 }

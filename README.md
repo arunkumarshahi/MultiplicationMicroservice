@@ -15,3 +15,5 @@ step to install jetty : https://www.linuxcloudvps.com/blog/how-to-install-jetty-
 
 start jetty :: java -jar /opt/jetty9/start.jar
 
+http://localhost:8000/api/multiplications/1
+http://localhost:8761/
