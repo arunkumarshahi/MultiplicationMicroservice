@@ -12,7 +12,7 @@ import com.netflix.hystrix.exception.HystrixTimeoutException;
 @Configuration
 public class HystrixFallbackConfiguration implements FallbackProvider {
 
-	private static final String DEFAULT_MESSAGE = "Multiplication service is not available.";
+	private static final String DEFAULT_MESSAGE = "Multiplication service is currently not available.";
 
 	@Override
 	public String getRoute() {
