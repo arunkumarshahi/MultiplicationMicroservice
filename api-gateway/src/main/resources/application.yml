@@ -7,7 +7,7 @@ zuul:
   routes:
     multiplications:
       path: /multiplications/**
-      serviceId: MULTIPLICATION
+      serviceId: multiplication
       strip-prefix: false
     results:
       path: /results/**
@@ -21,15 +21,15 @@ zuul:
       path: /stats/**
       serviceId: gamification
       strip-prefix: false
-ribbon:
-   eureka:
-      enabled: false
-      
-endpoints:
-  routes:
-    sensitive: false
-  trace:
-    sensitive: false
+#ribbon:
+#   eureka:
+#      enabled: false
+#      
+#endpoints:
+#  routes:
+#    sensitive: false
+#  trace:
+#    sensitive: false
 
 eureka:
   client:
