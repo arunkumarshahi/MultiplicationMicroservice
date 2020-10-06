@@ -31,5 +31,26 @@ to stat the consul on window :
 cd C:\software\consul_1.0.0_windows_amd64
 consul agent -dev
 
+update following keyvalue pair in consul
+======= config/gateway-service/data =========
 
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: multiplication
+          uri: lb://multiplication
+          predicates:
+            - Path=/multiplications/**
+#          filters:
+#            - RewritePath=/multiplications/(?<path>.*), /$\{path}
+        - id: callme-service
+          uri: lb://callme-service
+          predicates:
+            - Path=/callme/**
+          filters:
+            - RewritePath=/callme/(?<path>.*), /$\{path}
 
