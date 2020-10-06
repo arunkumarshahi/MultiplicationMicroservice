@@ -1,0 +1,19 @@
+#spring:
+#  cloud:
+#    gateway:
+#      discovery:
+#        locator:
+#          enabled: true
+#      routes:
+#        - id: multiplication
+#          uri: lb://multiplication
+#          predicates:
+#            - Path=/multiplications/**
+##          filters:
+##            - RewritePath=/multiplications/(?<path>.*), /$\{path}
+#        - id: callme-service
+#          uri: lb://callme-service
+#          predicates:
+#            - Path=/callme/**
+#          filters:
+#            - RewritePath=/callme/(?<path>.*), /$\{path}

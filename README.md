@@ -25,3 +25,11 @@ http://localhost:8000/api/multiplications/random
 
 to start the consul ::: 
 sudo docker run -d --name consul -p 8500:8500 consul
+
+to stat the consul on window :
+
+cd C:\software\consul_1.0.0_windows_amd64
+consul agent -dev
+
+
+
