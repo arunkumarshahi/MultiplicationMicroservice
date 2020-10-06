@@ -3,6 +3,7 @@ function updateMultiplication() {
     $.ajax({
         url: SERVER_URL+"/multiplications/random"
     }).then(function(data) {
+        alert("data received == "+data);
         // Cleans the form
         $("#attempt-form").find( "input[name='result-attempt']" ).val("");
         $("#attempt-form").find( "input[name='user-alias']" ).val("");

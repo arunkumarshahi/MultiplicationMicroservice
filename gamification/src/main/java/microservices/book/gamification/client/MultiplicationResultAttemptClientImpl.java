@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+//import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
 /**
  * This implementation of MultiplicationResultAttemptClient interface connects
@@ -25,7 +25,7 @@ class MultiplicationResultAttemptClientImpl implements MultiplicationResultAttem
 		this.multiplicationHost = multiplicationHost;
 	}
 
-	@HystrixCommand(fallbackMethod = "defaultResult")
+	//@HystrixCommand(fallbackMethod = "defaultResult")
 	@Override
 	public MultiplicationResultAttempt retrieveMultiplicationResultAttemptbyId(
 			final Long multiplicationResultAttemptId) {

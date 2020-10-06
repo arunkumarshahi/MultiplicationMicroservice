@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: multiplication
+  cloud:
+    consul:
+      host: localhost
+      discovery:
+        hostname: localhost
+        register-health-check: false

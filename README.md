@@ -22,3 +22,6 @@ http://localhost:8761/
 http://localhost:8000/api/leaders
 
 http://localhost:8000/api/multiplications/random
+
+to start the consul ::: 
+sudo docker run -d --name consul -p 8500:8500 consul
